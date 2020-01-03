@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Mood Indigo</string>
+    <string name="image1_des">
+        Mood Indigo 2019 or \'MI 2K19\' witnessed the grandeur of happiness and joy. With flying feet all
+        around the institute, IIT Bombay was overwhelmed by the beauty of herself and the enthusiasm of
+        people visiting her from all around the world. From painted walls to the best performances, from
+        the selfie points to huge concerts, it was certainly an event not to be missed. With a footfall of
+        around 140K+ there were huge gatherings where people get to know each other irrespective of the
+        society of the world whom they belong to. Known as Asia\'s largest cultural fest, it experienced
+        once in a lifetime things. Let\'s get to them one by one....
+    </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

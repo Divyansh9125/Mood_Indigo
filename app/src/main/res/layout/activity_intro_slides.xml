@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+
+    <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/image1"
+                        android:layout_width="300dp"
+                        android:layout_height="300dp"
+                        android:layout_centerHorizontal="true"
+
+                        app:cardCornerRadius="20dp">
+
+                        <ImageView
+                            android:id="@+id/image"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="Images"
+                            android:src="@drawable/image1" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <View
+                        android:layout_width="100dp"
+                        android:layout_height="3dp"
+                        android:layout_below="@id/image1"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/view_background" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/text1"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/image1"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:padding="5dp"
+                        android:layout_marginBottom="10dp"
+                        app:cardCornerRadius="20dp">
+
+                        <TextView
+                            android:id="@+id/text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/image1"
+                            android:padding="20dp"
+                            android:text="@string/image1_des"
+                            android:textSize="12sp"
+                            android:textStyle="italic" />
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </RelativeLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
