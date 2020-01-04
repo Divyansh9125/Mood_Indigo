@@ -18,6 +18,7 @@ public class IntroSlidesActivity extends AppCompatActivity {
     private ViewPager mSlideViewPager;
     private SliderAdapter mSlideAdapter;
     private RelativeLayout layout;
+    private TextView skipText;
 
     public int[] background = {
             R.drawable.background_1,
@@ -36,6 +37,17 @@ public class IntroSlidesActivity extends AppCompatActivity {
         mSlideAdapter = new SliderAdapter(this, layout);
         mSlideViewPager.setAdapter(mSlideAdapter);
         mSlideViewPager.addOnPageChangeListener(viewListner);
+        skipText = findViewById(R.id.skip_1);
+
+        skipText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(IntroSlidesActivity.this, HomeScreenActivity.class);
+                startActivity(intent);
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                finish();
+            }
+        });
 
     }
 
@@ -50,6 +62,13 @@ public class IntroSlidesActivity extends AppCompatActivity {
         public void onPageSelected(int position) {
 
             layout.setBackgroundResource(background[position]);
+            int l = background.length;
+            if(position == l-1){
+                skipText.setText("Go to the app..");
+            }
+            else {
+                skipText.setText("SKIP");
+            }
 
         }
 
