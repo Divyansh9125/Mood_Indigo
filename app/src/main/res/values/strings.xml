@@ -10,6 +10,9 @@
         once in a lifetime things. Let\'s get to them one by one....
     </string>
 
+    <string name="hide_pwd">Hide Password</string>
+    <string name="show_pwd">Show Password</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
