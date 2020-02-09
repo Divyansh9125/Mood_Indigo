@@ -103,7 +103,7 @@ public class Register_Fragment extends Fragment implements View.OnClickListener 
                 break;
             case R.id.alreadyRegistered:
                 fragmentManager.beginTransaction().setCustomAnimations(R.anim.left_enter, R.anim.right_out)
-                        .replace(R.id.frameContainer, new Login_Fragment(), Utils.ForgotPassword_Fragment).commit();
+                        .replace(R.id.frameContainer, new Login_Fragment(), Utils.Register_Fragment).commit();
                 break;
 
             case R.id.dob_selector_register:
@@ -195,6 +195,8 @@ public class Register_Fragment extends Fragment implements View.OnClickListener 
         }
         else {
             Toast.makeText(getContext(), "Registration done!", Toast.LENGTH_SHORT).show();
+            fragmentManager.beginTransaction().setCustomAnimations(R.anim.left_enter, R.anim.right_out)
+                    .replace(R.id.frameContainer, new Login_Fragment(), Utils.Register_Fragment).commit();
         }
     }
 }

@@ -1,5 +1,6 @@
 package com.example.moodindigo.Login;
 
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.content.res.XmlResourceParser;
 import android.os.Bundle;
@@ -24,7 +25,9 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import com.example.moodindigo.PrefManager;
 import com.example.moodindigo.R;
+import com.example.moodindigo.mainapp.MainScreen;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -39,6 +42,7 @@ public class Login_Fragment extends Fragment implements View.OnClickListener {
     private static LinearLayout loginLayout;
     private static Animation shakeAnimation;
     private static FragmentManager fragmentManager;
+    private static PrefManager prefManager;
 
     public Login_Fragment(){
 
@@ -128,6 +132,9 @@ public class Login_Fragment extends Fragment implements View.OnClickListener {
 
         else{
             Toast.makeText(getContext(), "Login done!", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(getContext(), MainScreen.class));
+            prefManager = new PrefManager(getContext());
+            prefManager.setHasLoggedIn(true);
         }
     }
 }

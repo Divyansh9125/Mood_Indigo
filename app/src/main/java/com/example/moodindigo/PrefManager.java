@@ -13,6 +13,7 @@ public class PrefManager {
 
     private static final String PREF_NAME ="MoodIndigo_prefs";
     private static final String IsFirstTimeLaunch = "IsFirstTimeLaunch";
+    private static final String HasLoggedIn = "HasLoggedIn";
 
     public PrefManager(Context context){
         this.context = context;
@@ -27,5 +28,14 @@ public class PrefManager {
 
     public boolean isFirstTimeLaunch(){
         return pref.getBoolean(IsFirstTimeLaunch, true);
+    }
+
+    public void setHasLoggedIn(boolean hasloogedin){
+        editor.putBoolean(HasLoggedIn, hasloogedin);
+        editor.commit();
+    }
+
+    public boolean hasLoggedIn(){
+        return pref.getBoolean(HasLoggedIn, false);
     }
 }

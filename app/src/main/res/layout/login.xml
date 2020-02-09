@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
+    android:background="@drawable/images2"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="20dp">
 
@@ -20,7 +21,7 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp">
+            android:background="@drawable/image3">
 
             <LinearLayout
                 android:id="@+id/login_layout"
@@ -34,7 +35,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:textColor="#000000"
+                    android:textColor="#ffffff"
                     android:padding="10dp"
                     android:text="Login"
                     android:textSize="25sp"
@@ -52,14 +53,14 @@
                     android:hint="Email"
                     android:inputType="textEmailAddress"
                     android:padding="10dp"
-                    android:textColor="#000000"
+                    android:textColor="#ffffff"
                     android:textColorHint="#c0c0c0"
                     android:textSize="16sp" />
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1px"
-                    android:background="#000000"
+                    android:background="#ffffff"
                     android:layout_marginHorizontal="20dp" />
 
                 <EditText
@@ -75,7 +76,7 @@
                     android:hint="Password"
                     android:inputType="textPassword"
                     android:textColorHint="#c0c0c0"
-                    android:textColor="#000000"
+                    android:textColor="#ffffff"
                     android:textSize="16sp" />
 
                 <LinearLayout
@@ -91,6 +92,8 @@
                         android:id="@+id/show_hide_password"
                         android:layout_weight="1"
                         android:text="Show Password"
+                        android:textColor="#ffffff"
+                        android:buttonTint="#ffffff"
                         android:textSize="14sp" />
 
                     <TextView
@@ -101,7 +104,7 @@
                         android:gravity="end"
                         android:padding="5sp"
                         android:text="Forgot Password"
-                        android:textColor="#000000"
+                        android:textColor="#ffffff"
                         android:textSize="14sp" />
                 </LinearLayout>
 
@@ -110,8 +113,8 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/login_button"
                     android:layout_marginTop="3dp"
-                    android:background="#c0c0c0"
-                    android:textColor="#ffffff"
+                    android:background="#ffffff"
+                    android:textColor="#000000"
                     android:text="Login"
                     android:textSize="17sp"
                     android:textStyle="bold" />
@@ -128,7 +131,7 @@
                 android:gravity="center"
                 android:layout_below="@id/login_layout"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="100dp"
                 android:padding="5dp" />
         </RelativeLayout>
 

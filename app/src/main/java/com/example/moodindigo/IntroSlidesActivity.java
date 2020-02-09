@@ -19,6 +19,7 @@ public class IntroSlidesActivity extends AppCompatActivity {
     private SliderAdapter mSlideAdapter;
     private RelativeLayout layout;
     private TextView skipText;
+    private PrefManager prefManager;
 
     public int[] background = {
             R.drawable.background_1,
@@ -30,6 +31,11 @@ public class IntroSlidesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        prefManager = new PrefManager(this);
+        if(!prefManager.isFirstTimeLaunch()){
+            launchLoginScreen();
+            finish();
+        }
         setContentView(R.layout.diary_layout);
         layout = findViewById(R.id.slider_layout);
 
@@ -42,6 +48,7 @@ public class IntroSlidesActivity extends AppCompatActivity {
         skipText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                prefManager.setFirstLaunch(false);
                 Intent intent = new Intent(IntroSlidesActivity.this, HomeScreenActivity.class);
                 startActivity(intent);
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
@@ -77,5 +84,11 @@ public class IntroSlidesActivity extends AppCompatActivity {
 
         }
     };
+
+    private void launchLoginScreen(){
+        prefManager.setFirstLaunch(false);
+        startActivity(new Intent(IntroSlidesActivity.this, HomeScreenActivity.class));
+        finish();
+    }
 
 }

@@ -6,6 +6,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:datePickerDialogTheme">@style/myTheme</item>
     </style>
 
     <style name="AppTheme.OnlyStatusBar">
@@ -14,6 +15,14 @@
         <item name="android:windowFullscreen">false</item>
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:statusBarColor">#000000</item>
+    </style>
+
+    <style name="myTheme" parent="android:Theme.Material.Light.Dialog">
+        <item name="android:datePickerStyle">@style/mystyle</item>
+    </style>
+
+    <style name="mystyle" parent="@android:style/Widget.Material.Light.DatePicker">
+        <item name="android:headerBackground">#000000</item>
     </style>
 
 </resources>
